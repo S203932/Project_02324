@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "C:\Users\Lenovo\Desktop\C-lion projekt" -B "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-yukon-game"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-yukon-game

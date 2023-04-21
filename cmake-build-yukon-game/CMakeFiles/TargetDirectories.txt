@@ -1,0 +1,3 @@
+C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-yukon-game/CMakeFiles/Project_02324.dir
+C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-yukon-game/CMakeFiles/edit_cache.dir
+C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-yukon-game/CMakeFiles/rebuild_cache.dir
