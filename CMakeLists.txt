@@ -3,4 +3,4 @@ project(Project_02324 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Project_02324 main.c)
+add_executable(Project_02324 main.c linkedlist.c linkedlist.h)
