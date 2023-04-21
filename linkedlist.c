@@ -24,6 +24,7 @@ void Append_of_Card(Linked_list *list, struct CardList cards){
     newCard->InGame = cards.InGame;
     newCard->faceDown = cards.faceDown;
 
+    //TODO//
     if( list -> size == 0) {
 
     }

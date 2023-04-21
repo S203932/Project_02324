@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+
 int main() {
 
+<<<<<<< Updated upstream
     char *fs[] = {"F1", "F2", "F3", "F4"};
     printf("\nC1\tC2\tC3\tC4\tC5\tC6\tC7\n");
     for(int i = 0; i < 4;i++){
@@ -12,6 +14,8 @@ int main() {
     }
 
 
+=======
+>>>>>>> Stashed changes
 
 
     return 0;
