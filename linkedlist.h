@@ -21,3 +21,4 @@ typedef struct {
 Linked_list *createLinkedList();
 
 void Append_of_Card(Linked_list *list, struct CardList cards);
+void Prepend_of_Card (Linked_list *list, struct ListCard card);
