@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 typedef struct card {
     char value;
     char suit;
@@ -56,9 +57,9 @@ int main() {
     }
 
     // Start screen
-    start_screen();
+   // start_screen();
 
     // Print board
-    print_board(tableau, foundation);
+   // print_board(tableau, foundation);
 
 }

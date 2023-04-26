@@ -78,6 +78,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/Card.h">
+			<Option target="Project_02324"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/boardlist.h">
+			<Option target="Project_02324"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/ld.c">
+			<Option target="Project_02324"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/ld.h">
+			<Option target="Project_02324"/>
+		</Unit>
 		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist.c">
 			<Option target="Project_02324"/>
 		</Unit>

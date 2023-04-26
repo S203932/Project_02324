@@ -128,6 +128,30 @@ Project_02324/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/build
 .PHONY : Project_02324/fast
 
+ld.obj: ld.c.obj
+.PHONY : ld.obj
+
+# target to build an object file
+ld.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/ld.c.obj
+.PHONY : ld.c.obj
+
+ld.i: ld.c.i
+.PHONY : ld.i
+
+# target to preprocess a source file
+ld.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/ld.c.i
+.PHONY : ld.c.i
+
+ld.s: ld.c.s
+.PHONY : ld.s
+
+# target to generate assembly for a file
+ld.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/ld.c.s
+.PHONY : ld.c.s
+
 linkedlist.obj: linkedlist.c.obj
 .PHONY : linkedlist.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Project_02324
+	@echo ... ld.obj
+	@echo ... ld.i
+	@echo ... ld.s
 	@echo ... linkedlist.obj
 	@echo ... linkedlist.i
 	@echo ... linkedlist.s

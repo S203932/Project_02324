@@ -1,31 +1,42 @@
 #include "linkedlist.h"
-
-
+#include "Card.h"
 
 // Creating an empty linked list and return a pointer to the list//
-
-Linked_list *CreateLinkedList() {
-    Linked_list *newLinkedList;
-    newLinkedList = (Linked_list *) malloc(sizeof(Linked_list));
+void CreateLinkList() {
+    struct card *head,*middle,*last;
 
 
-    newLinkedList->size = 0;
-    newLinkedList->head = NULL;
-    newLinkedList->tail = NULL;
+    //allocating memory for each node
+    head   = malloc(sizeof(struct card));
+    middle = malloc(sizeof(struct card));
+    last   = malloc(sizeof(struct card));
 
-    return newLinkedList;
-}
+    //assigning suit to each node
+    head->suit = head->suit;
+    middle->suit = middle->suit;
+    last->suit  = last->suit;
 
-void Append_of_Card(Linked_list *list, struct CardList cards){
-    struct CardList *newCard = (struct CardList *) malloc(sizeof(struct CardList));
+    //assigning value to each node
+    head->value  = head->value;
+    middle->value = middle->value;
+    last->value  = last->value;
 
-    newCard->suit = cards.suit;
-    newCard->value = cards.value;
-    newCard->InGame = cards.InGame;
-    newCard->faceDown = cards.faceDown;
+    //connecting each nodes. head->middle->last
+    head->next   = middle;
+    middle->next = last;
+    last->next   = NULL;
 
-    //TODO//
-    if( list -> size == 0) {
+    struct card *temp = head;
 
+    while(temp != NULL)
+    {
+        printf("%d->",temp->value);
+        temp = temp->next;
     }
+    printf("NULL");
+
+
+    return CreateLinkList();
 }
+
+

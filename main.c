@@ -3,6 +3,7 @@
 #include "ld.h"
 #include <dirent.h>
 #include<unistd.h>
+/*
 int main() {
 
 //empty_board();
@@ -10,5 +11,7 @@ int main() {
 printf(LD(" "));
 
 
+
 return 0;
 }
+*/
