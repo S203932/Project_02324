@@ -78,7 +78,7 @@ void AppendCard(struct Node** head_ref, struct card CardList)
     while (tail->next != NULL)
         tail = tail->next;
 
-    /* 6. Change the next of last node */
+    // Change the next of last node */
     tail->next = new_card;
     return;
 }
