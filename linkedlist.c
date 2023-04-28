@@ -1,19 +1,21 @@
 #include "linkedlist.h"
 #include "Card.h"
 
-Linked_list *MakeLinkedList() {
+
+// Creating an empty linked list
+Linked_list *CreateLinkedList() {
     Linked_list *newLinkedList;
     newLinkedList = (Linked_list *) malloc(sizeof(Linked_list));
 
-    newLinkedList->size = 0;
     newLinkedList->head = NULL;
     newLinkedList->tail = NULL;
+    newLinkedList->size = 0;
 
     return newLinkedList;
 }
 
 // Creating linked list and return a pointer to the list//
-void PrependCard(Linked_list *list, struct card** head_ref, struct card CardList) {
+void PrependCard(Linked_list *list, struct card CardList) {
 
     //allocating memory for node
     struct card * new_card =( struct card*) malloc(sizeof (struct card));
@@ -23,10 +25,22 @@ void PrependCard(Linked_list *list, struct card** head_ref, struct card CardList
     new_card->suit = CardList.suit;
 
     // Make new_card as head/
-    new_card->next = (*head_ref);
+    if( list ->size == 0){
+        new_card->next = NULL;
+        list->head =new_card;
+        list->tail =new_card;
+    } else {
+        new_card->next = list ->head;
+        list->head->prev= NULL;
+        list->head = new_card;
+    }
+
+    list->size++;
+
+    /*new_card->next = (*head_ref);
 
     // Head points to the new card//
-    (*head_ref) = new_card;
+    (*head_ref) = new_card;*/
 
 }
 
@@ -53,21 +67,34 @@ void InsertCard(struct card* prev_node, struct card CardList) {
 
 
 
-void AppendCard(struct Node** head_ref, struct card CardList)
+void AppendCard(Linked_list *list, struct card CardList)
 {
     //allocating memory for node
     struct card* new_card = (struct card*) malloc(sizeof(struct card));
 
-    struct card * tail = *head_ref;
+    /*struct card * tail = *head_ref;*/
 
     //assigning new card to each node
     new_card-> value  = CardList.value;
     new_card->suit = CardList.suit;
 
     // This new node is going to be the last node, so next is NULL
-    new_card->next = NULL;
+    if(list->size == 0) {
+        new_card->next = NULL;
+        new_card->prev = NULL;
+        list->head = new_card;
+        list->tail = new_card;
+    } else {
+        new_card->prev = list->tail;
+        list->tail->next = new_card;
+        new_card->next = NULL;
+        list->tail = new_card;
+    }
 
-    //If the Linked List is empty, then make the new node as head */
+    list->size++;
+
+    /*
+    //If the Linked List is empty, then make the new node as head
     if (*head_ref == NULL)
     {
         *head_ref = new_card;
@@ -78,9 +105,11 @@ void AppendCard(struct Node** head_ref, struct card CardList)
     while (tail->next != NULL)
         tail = tail->next;
 
-    // Change the next of last node */
+    // Change the next of last node 
     tail->next = new_card;
     return;
+
+    */
 }
 
 

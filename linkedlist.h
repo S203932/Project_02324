@@ -5,5 +5,5 @@
 typedef struct {
     struct card *head;
     struct card *tail;
-    int size;
+    int size = 0;
 } Linked_list;

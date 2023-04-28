@@ -6,6 +6,7 @@ typedef struct card {
     char value;
     char suit;
     struct card* next;
+    struct card* prev;
 } Card;
 
 typedef struct pile {
