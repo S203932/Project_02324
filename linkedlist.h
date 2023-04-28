@@ -2,17 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/*
-// start of structs//
-struct CardList {
-    char suit;
-    char value;
-    struct CardList *temp head;
-    struct CardList *next;
-    struct CardList *prev;
-};
-
 typedef struct {
-    struct CardList *head;
-};
-*/
+    struct card *head;
+    struct card *tail;
+    int size;
+} Linked_list;
