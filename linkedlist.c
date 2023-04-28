@@ -14,7 +14,7 @@ Linked_list *CreateLinkedList() {
     return newLinkedList;
 }
 
-// Creating linked list and return a pointer to the list//
+// Add a new node to the beginning of existing list
 void PrependCard(Linked_list *list, struct card CardList) {
 
     //allocating memory for node
@@ -66,7 +66,7 @@ void InsertCard(struct card* prev_node, struct card CardList) {
 }
 
 
-
+// Add a new node to the end of existing list
 void AppendCard(Linked_list *list, struct card CardList)
 {
     //allocating memory for node
@@ -105,7 +105,7 @@ void AppendCard(Linked_list *list, struct card CardList)
     while (tail->next != NULL)
         tail = tail->next;
 
-    // Change the next of last node 
+    // Change the next of last node
     tail->next = new_card;
     return;
 
