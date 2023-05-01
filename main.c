@@ -5,14 +5,13 @@
 #include "process_input.h"
 #include <dirent.h>
 #include "linkedlist.h"
+#include "linkedlist2.h"
 //#include "Card.h"
 #include<unistd.h>
 
 int main() {
     // Need to change the working directory, but only once
     chdir("..");
-
-
 
 
     //Initializing variables used later
@@ -28,12 +27,8 @@ int main() {
     function[0] = '\0';
     function[1] = '\0';
     function[2] = '\0';
-    struct Linked_list* linkedList = NULL;
+    struct Node* head = NULL;
 
-
-    //Linked_list linkedList1 =* CreateLinkedList();
-
-    //Linked_list linkedList = CreateLinkedList();
 
     //Loop that runs until cards is loaded successfully from txt via LD function
     while(initialize && !quit) {
@@ -53,7 +48,7 @@ int main() {
                 }
             }
             char *filePath = &path;
-            message = LD(filePath);
+            message = LD(filePath, &head);
             if (strcmp(message, approved) == 0) {
                 initialize = 0;
             }
@@ -83,7 +78,7 @@ int main() {
                 }
             }
             char *filePath = &path;
-            message = LD(filePath);
+            message = LD(filePath, &head);
         }else if(strcmp(qq, function) == 0){
             initialize = 0;
             quit = 1;

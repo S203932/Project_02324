@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "ld.h"
-#include "linkedlist.h"
+#include <string.h>
+#include "linkedlist2.h"
 #include "Card.h"
 
-char* LD(char *filename ){
+char* LD(char *filename, struct Node *node){
     char check[] = " ";
     FILE* file;
     char *message;
@@ -25,13 +25,13 @@ char* LD(char *filename ){
         }
     }
 
-    char card;
-
+    char card[2];
+    int counter = 0;
     do {
-        card = fgetc(file);
-        //printf("%c", card);
-
-    } while (card != EOF);
+        fgets(card,5,file);
+        push(node,card[0],card[1]);
+        counter++;
+    } while (counter<52);
     fclose(file);
     return message;
 }
