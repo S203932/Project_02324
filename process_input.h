@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-char* process_input(char* message) {
-    char last_cmd[10] = "";
-    char* input = malloc(sizeof(char) * 10);
-    printf("\nLAST Command: %s\n", last_cmd);
+char* process_input(char* message, char function[50]) {
+    char* input = malloc(sizeof(char) * 50);
+    printf("\nLAST Command: %s\n", function);
     printf("Message: %s \n",message);
     printf("INPUT > ");
-    fgets(input, sizeof(input), stdin);
+    fgets(input, 50, stdin);
     input[strcspn(input, "\n")] = '\0'; // remove trailing newline
 
     return input;

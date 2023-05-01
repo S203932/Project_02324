@@ -67,8 +67,7 @@ void InsertCard(struct card* prev_node, struct card CardList) {
 
 
 // Add a new node to the end of existing list
-void AppendCard(Linked_list *list, struct card CardList)
-{
+void AppendCard(Linked_list *list, struct card CardList){
     //allocating memory for node
     struct card* new_card = (struct card*) malloc(sizeof(struct card));
 

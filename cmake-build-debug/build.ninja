@@ -67,6 +67,12 @@ build CMakeFiles/Project_02324.dir/ld.c.obj: C_COMPILER__Project_02324_Debug C$:
   OBJECT_DIR = CMakeFiles\Project_02324.dir
   OBJECT_FILE_DIR = CMakeFiles\Project_02324.dir
 
+build CMakeFiles/Project_02324.dir/linkedlist2.c.obj: C_COMPILER__Project_02324_Debug C$:/Users/Bruger/CLionProjects/Project_02324/linkedlist2.c || cmake_object_order_depends_target_Project_02324
+  DEP_FILE = CMakeFiles\Project_02324.dir\linkedlist2.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles\Project_02324.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project_02324.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Project_02324
@@ -75,7 +81,7 @@ build CMakeFiles/Project_02324.dir/ld.c.obj: C_COMPILER__Project_02324_Debug C$:
 #############################################
 # Link the executable Project_02324.exe
 
-build Project_02324.exe: C_EXECUTABLE_LINKER__Project_02324_Debug CMakeFiles/Project_02324.dir/main.c.obj CMakeFiles/Project_02324.dir/linkedlist.c.obj CMakeFiles/Project_02324.dir/ld.c.obj
+build Project_02324.exe: C_EXECUTABLE_LINKER__Project_02324_Debug CMakeFiles/Project_02324.dir/main.c.obj CMakeFiles/Project_02324.dir/linkedlist.c.obj CMakeFiles/Project_02324.dir/ld.c.obj CMakeFiles/Project_02324.dir/linkedlist2.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Project_02324.dir

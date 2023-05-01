@@ -3,4 +3,4 @@
 //#include "ld.c"
 #include <dirent.h>
 
-const char* LD(char *filename);
+char* LD(char *filename);

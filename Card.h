@@ -13,7 +13,7 @@ typedef struct pile {
     Card* top;
     char name[3];
 } Pile;
-
+/*
 void print_card(Card* card) {
     if (card == NULL) {
         printf("   ");
@@ -27,7 +27,8 @@ void print_pile(Pile* pile) {
     print_card(pile->top);
     printf("\n");
 }
-
+ */
+/*
 int main() {
     Pile tableau[7];
     Pile foundation[4];
@@ -64,3 +65,4 @@ int main() {
    // print_board(tableau, foundation);
 
 }
+*/
