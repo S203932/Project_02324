@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <string.h>
+#include <dirent.h>
+
 #include "boardlist.h"
 #include "ld.h"
 #include "process_input.h"
-#include <dirent.h>
-#include "linkedlist.h"
 #include "linkedlist2.h"
 //#include "Card.h"
-#include<unistd.h>
+
+
+typedef struct node node;
 
 int main() {
     // Need to change the working directory, but only once
@@ -21,6 +23,7 @@ int main() {
     char input[50] = ""; // Defines the maximum length available,
     char tempInput[50] = ""; // changes made here needs to also be changed else where
     char ld[] = "LD";
+    char sw[] = "SW";
     char qq[] = "QQ";
     char approved[] = "OK";
     char function[3];
@@ -59,17 +62,22 @@ int main() {
             message = "Not a valid command, only LD or QQ is valid.";
         }
     }
-    // Reseting the initialize for next while loop
+
+    // Resetting the initialize for next while loop
     initialize = 1;
     while(initialize && !quit){
-        empty_board();
+        if(strcmp(sw, function) != 0){
+            empty_board();
+        }
         strcpy(tempInput, process_input(message, input));
         strcpy(input, tempInput);
         memcpy(function, input, 2);
         function[0] = input[0];
         function[1] = input[1];
         // The if statements is for the various functions available
+        // LD function
         if (strcmp(ld, function) == 0) {
+            head = NULL;
             char path[strlen(input) - 2];
             for (int i = 3; i < strlen(input); i++) {
                 path[i - 3] = input[i];
@@ -79,9 +87,13 @@ int main() {
             }
             char *filePath = &path;
             message = LD(filePath, &head);
-        }else if(strcmp(qq, function) == 0){
+        // QQ function
+        }else if(strcmp(qq, function) == 0) {
             initialize = 0;
             quit = 1;
+        // SW Function
+        }else if(strcmp(sw, function) == 0) {
+            message = show_board(head);
         }else{
             message = "Not a valid command, only LD or QQ is valid.";
         }

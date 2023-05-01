@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 
 struct Node;
@@ -12,4 +11,6 @@ void insertAfter(struct Node* prev_node, char value, char suit);
 void append(struct Node** head_ref, char value, int suit);
 
 void printList(struct Node *node);
+
+void reverse(struct Node** headref);
 

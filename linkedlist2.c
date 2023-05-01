@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct Node{
+typedef struct Node{
     char value;
     char suit;
     struct Node *next;
-};
+}Node;
 
 void push (struct Node** head_ref, char value, char suit){
 
@@ -69,4 +68,22 @@ void printList(struct Node *node){
         printf("%c%c\n",node->value,node->suit);
         node = node->next;
     }
+}
+
+Node element(void){
+
+}
+
+
+void reverse(struct Node** headref){
+    struct Node* prev = NULL;
+    struct Node* current  = *headref;
+    struct Node* next = NULL;
+    while(current != NULL){
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *headref = prev;
 }
