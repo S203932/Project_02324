@@ -2,17 +2,24 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+struct CardList{
+    char suit;
+    char value;
+    struct CardList*next;
+    struct CardList*prev;
+};
+
 typedef struct {
-    struct card *head;
-    struct card *tail;
+    struct CardList *head;
+    struct CardList *tail;
     int size;
 } Linked_list;
 
 Linked_list *CreateLinkedList();
 
-void PrependCard(Linked_list *list, struct card CardList);
+void PrependCard(Linked_list *list, struct CardList);
 
-void InsertCard(struct card* prev_node, struct card CardList);
+void InsertCard(struct card* prev_node, struct CardList);
 
-void AppendCard(Linked_list *list, struct card CardList);
+void AppendCard(Linked_list *list, struct CardList);
 

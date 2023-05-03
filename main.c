@@ -8,7 +8,7 @@
 #include "linkedlist2.h"
 //#include "Card.h"
 #include "SD.h"
-#include "SI.h";
+#include "SI.h"
 typedef struct node node;
 
 int main() {

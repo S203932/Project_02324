@@ -1,5 +1,6 @@
 #include "linkedlist.h"
-#include "Card.h"
+
+
 
 
 // Creating an empty linked list
@@ -15,23 +16,25 @@ Linked_list *CreateLinkedList() {
 }
 
 // Add a new node to the beginning of existing list
-void PrependCard(Linked_list *list, struct card CardList) {
+void PrependCard(Linked_list *list, struct CardList card) {
 
     //allocating memory for node
-    struct card * new_card =( struct card*) malloc(sizeof (struct card));
+    struct CardList * new_card =( struct CardList*) malloc(sizeof (struct CardList));
 
     //assigning new card to each node
-    new_card->value = CardList.value;
-    new_card->suit = CardList.suit;
+    new_card->value = card.value;
+    new_card->suit = card.suit;
 
     // Make new_card as head/
     if( list ->size == 0){
         new_card->next = NULL;
+        new_card->prev = NULL;
         list->head =new_card;
         list->tail =new_card;
     } else {
         new_card->next = list ->head;
-        list->head->prev= NULL;
+        list->head-> prev = new_card;
+        new_card->prev = NULL;
         list->head = new_card;
     }
 
@@ -44,7 +47,7 @@ void PrependCard(Linked_list *list, struct card CardList) {
 
 }
 
-void InsertCard(struct card* prev_node, struct card CardList) {
+void InsertAfter(Linked_list *list, struct CardList* prev_node, struct CardList card) {
 
     if (prev_node == NULL)
     {
@@ -52,11 +55,11 @@ void InsertCard(struct card* prev_node, struct card CardList) {
         return;
     }
 
-    struct card * new_card =( struct card*) malloc(sizeof (struct card));
+    struct CardList * new_card =( struct CardList*) malloc(sizeof (struct CardList));
 
     //allocating memory for node
-    new_card->value = CardList.value;
-    new_card->suit = CardList.suit;
+    new_card->value = card.value;
+    new_card->suit = card.suit;
 
     //Make next of new card as next of prev_node
     new_card->next = prev_node->next;
@@ -67,15 +70,15 @@ void InsertCard(struct card* prev_node, struct card CardList) {
 
 
 // Add a new node to the end of existing list
-void AppendCard(Linked_list *list, struct card CardList){
+void AppendCard(Linked_list *list, struct CardList card){
     //allocating memory for node
-    struct card* new_card = (struct card*) malloc(sizeof(struct card));
+    struct CardList* new_card = (struct CardList*) malloc(sizeof(struct CardList ));
 
     /*struct card * tail = *head_ref;*/
 
     //assigning new card to each node
-    new_card-> value  = CardList.value;
-    new_card->suit = CardList.suit;
+    new_card-> value  = card.value;
+    new_card->suit = card.suit;
 
     // This new node is going to be the last node, so next is NULL
     if(list->size == 0) {
