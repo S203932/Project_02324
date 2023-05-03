@@ -19,7 +19,7 @@ Linked_list *CreateLinkedList();
 
 void PrependCard(Linked_list *list, struct CardList);
 
-void InsertCard(struct card* prev_node, struct CardList);
+void InsertCard(Linked_list *list, struct CardList* prev_node, struct CardList);
 
 void AppendCard(Linked_list *list, struct CardList);
 
