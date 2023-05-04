@@ -1,6 +1,5 @@
 #include <stdlib.h>
-#include <time.h>
-#include "linkedlist2.h" // assuming this header file defines the Node struct and linked list functions
+#include "linkedlist2.h"
 typedef struct Node{
     char value;
     char suit;
@@ -9,63 +8,86 @@ typedef struct Node{
 
 char* SI(int split, struct Node **head) {
     char* message = "";
-    struct Node *pile1 = NULL, *pile2 = NULL, *shuffled_pile = NULL, *temp = NULL;
-    int count = 1, i;
-    struct Node *last = *head;
+    struct Node *pile1 = NULL, *pile2 = NULL;
+    int counter = 0;
+    struct Node *Last = *head;
+    char data[2];
+    char data2[2];
+
 
     // Check if split parameter is valid
     if (split < 1 || split >= 51) {
         return "Error: Split parameter is invalid";
     }
 
-    pile2 = *head;
-    //struct Node *pile2Point = *pile2;
 
     // Split the deck into two piles
-    while (count < split) {
-        last = last -> next;
-        //pile2 = pile2 -> next;
-        count++;
+    while (counter < 52) {
+        if(counter < split) {
+            data[0] = Last->value;
+            data[1] = Last->suit;
+            append(&pile1,data[0],data[1]);
+        }else{
+            data2[0] = Last->value;
+            data2[1] = Last->suit;
+            append(&pile2,data2[0],data2[1]);
+        }
+        Last = Last -> next;
+        counter++;
     }
 
+    // Mix the two piles back into head
+    // First add a card from each pile
+    struct Node *pointer1 = pile1;
+    data[0] = pointer1->value;
+    data[1] = pointer1->suit;
+    clearNewValue(head,data[0],data[1]);
+    pointer1 = pointer1->next;
+
+    struct Node *pointer2 = pile2;
+    data2[0] = pointer2->value;
+    data2[1] = pointer2->suit;
+    append(head,data2[0],data2[1]);
+    pointer2 = pointer2->next;
 
 
-    // Splits pile
-    pile1 = last -> next;
-    last -> next = NULL;
-    head = NULL;
+    counter = 0;
 
-
-    // Interleave the two piles
-    while (pile1 != NULL && pile2 != NULL) {
-        temp = pile1->next;
-        pile1->next = pile2;
-        pile2 = pile2->next;
-        pile1->next->next = temp;
-        pile1 = temp;
+    //Intermix the two piles as long as there is cards in both
+    while(counter< 50 && pointer1 != NULL && pointer2 != NULL){
+        if(counter%2 == 0){
+            data[0] = pointer1->value;
+            data[1] = pointer1->suit;
+            append(head,data[0],data[1]);
+            pointer1 = pointer1->next;
+        } else{
+            data2[0] = pointer2->value;
+            data2[1] = pointer2->suit;
+            append(head,data2[0],data2[1]);
+            pointer2 = pointer2->next;
+        }
+        counter++;
     }
-    if (pile1 == NULL) {
-        temp = pile2;
-    } else {
-        temp = pile1;
+    reverse(head);
+    //Add leftover from pile 1
+    if(pointer1 != NULL){
+        while(pointer1 != NULL){
+            data[0] = pointer1->value;
+            data[1] = pointer1->suit;
+            append(head,data[0],data[1]);
+            pointer1 = pointer1->next;
+        }
+        //Add leftover from pile 2
+    }else{
+        while(pointer2 != NULL){
+            data2[0] = pointer2->value;
+            data2[1] = pointer2->suit;
+            append(head,data2[0],data2[1]);
+            pointer2 = pointer2->next;
+        }
     }
 
-    count = 0;
-    while(count > 52) {
+    message = "OK";
 
-    }
-
-
-    /*// Add the remaining cards to the bottom of the shuffled pile
-    for (i = 0; i < count_cards(temp); i++) {
-        add_card(&shuffled_pile, temp->card);
-        temp = temp->next;
-    }
-
-    // Make shuffled_pile the current deck
-    *head = shuffled_pile;
-
-    message = "Shuffled the deck in an interleaved manner";
-*/
     return message;
 }

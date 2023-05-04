@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+#include <ctype.h>
 
 #include "boardlist.h"
 #include "ld.h"
@@ -8,7 +9,9 @@
 #include "linkedlist2.h"
 //#include "Card.h"
 #include "SD.h"
-#include "SI.h"
+#include "SI.h";
+#include "sr.h"
+
 typedef struct node node;
 
 int main() {
@@ -90,18 +93,59 @@ int main() {
             }
             char *filePath = &path;
             message = LD(filePath, &head);
-        // QQ function
+            // QQ function
         }else if(strcmp(qq, function) == 0) {
             initialize = 0;
             quit = 1;
-        // SW Function
+            // SW Function
         }else if(strcmp(sw, function) == 0) {
             message = show_board(head);
             // SI Function
-        } else if (strcmp(si, function) == 0){
-
-            message = SI(4, &head);
-        } else if (strcmp(sd, function) == 0){
+        } else if(strcmp(si, function) == 0){
+            //Reading input into path char array
+            char path[strlen(input) - 2];
+            for (int i = 3; i < strlen(input); i++) {
+                path[i - 3] = input[i];
+                if (i == strlen(input) - 1) {
+                    path[i - 2] = '\0';
+                }
+            }
+            //Determining the size of the input
+            int size = sizeof(path) / sizeof(path[0]);
+            //Value is too big
+            if(size>3){
+                message = "Split value invalid";
+                //Value is none
+            }else if(size<=1){
+                int randomnumber;
+                randomnumber = (rand() % 51)+1;
+                message = SI(randomnumber,&head);
+                //Otherwise within parameters
+            }else{
+                int number = 0;
+                // If it is a 2 digit number
+                if(size>2){
+                    //Check if both values are numbers and not other characters
+                    if(path[0] >= '0' && path[0] <= '9' && path[1] >= '0' && path[1] <= '9'){
+                        number+= (path[0]-48)*10;
+                        number+=path[1]-48;
+                        message = SI(number, &head);
+                    }else{
+                        message = "Input was not only numbers";
+                    }
+                    // If it is a 1 digit number
+                }else{
+                    //Check if the values is a number and not a character
+                    if(path[0] >= '0' && path[0] <= '9'){
+                        number = path[0]-48;
+                        message = SI(number, &head);
+                    }else{
+                        message = "Input was not only numbers";
+                    }
+                }
+            }
+            // SD Function
+        } else if(strcmp(sd, function) == 0) {
             char path[strlen(input) - 2];
             for (int i = 3; i < strlen(input); i++) {
                 path[i - 3] = input[i];
@@ -111,18 +155,13 @@ int main() {
             }
             char *filePath = &path;
             message = SD(filePath, &head);
-        } else {    message = "Not a valid command, only LD or QQ is valid.";
+            //SR Function
+        }else if(strcmp(sr,function) == 0){
+            message=SR(&head);
+        } else {
+            message = "Not a valid command.";
         }
     }
-    /*
-    while()
-    while(1) {
-        empty_board();
-        char *m2 = LD(" ");
-        char input2[10];
-        strcpy(input2, process_input(m2));
-        printf("%s", input2);
-    }
-    */
+
     return 0;
 }
