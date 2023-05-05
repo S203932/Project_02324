@@ -51,6 +51,41 @@ void start_board(void) {
     }
 }
 
+void initial_play_board(struct Node *node){
+    char *fs[] = {"F1", "F2", "F3", "F4"};
+    printf("\nC1\tC2\tC3\tC4\tC5\tC6\tC7\n\n");
+    int counter = 0;
+    for(int i = 0; i < 11;i++){
+        for(int j = 0; j < 7; j++){
+
+            if(i == 0 && j == 0){
+                printf("%c%c\t",node->value,node->suit);
+                node = node->next;
+            } else if (j == 0){
+                printf("\t");
+            } else if (j <= i && i < 6){
+                printf("%c%c\t",node->value,node->suit);
+                node = node->next;
+            } else if (i < 6 && j > i){
+                printf("[]\t");
+                node = node->next;
+            } else if (i > 5 && ((i - j) >= 5)){
+                printf("\t");
+            } else if (i > 5 && ((i - j) <= 5)){
+                printf("%c%c\t",node->value,node->suit);
+                node = node->next;
+            }
+        }
+
+        if((i)%2 == 0 && i < 7){
+            printf("\t[]\t%s\n",fs[counter]);
+            counter++;
+        }else{
+            printf("\n");
+        }
+    }
+}
+
 char* show_board(struct Node *node){
     char *message = "Something went wrong in showing the cards";
     char *fs[] = {"F1", "F2", "F3", "F4"};

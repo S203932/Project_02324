@@ -11,3 +11,4 @@ void start_board(void);
 
 char* show_board(struct Node *node);
 
+void initial_play_board(struct Node *node);
