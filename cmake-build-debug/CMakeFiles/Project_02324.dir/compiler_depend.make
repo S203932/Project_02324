@@ -142,7 +142,6 @@ CMakeFiles/Project_02324.dir/main.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt
   C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/dirent.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/io.h \
-  C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/ctype.h \
   C:/Users/Lenovo/Desktop/C-lion\ projekt/boardlist.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
@@ -266,8 +265,6 @@ C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include
 C:/Users/Lenovo/Desktop/C-lion\ projekt/ld.c:
 
 C:/Users/Lenovo/Desktop/C-lion\ projekt/linkedlist.c:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/ctype.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.2.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
 

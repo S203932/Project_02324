@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
-#include <ctype.h>
+
 
 #include "boardlist.h"
 #include "ld.h"
@@ -9,7 +9,7 @@
 #include "linkedlist.h"
 //#include "Card.h"
 #include "SD.h"
-#include "SI.h";
+#include "SI.h"
 #include "sr.h"
 
 typedef struct node node;
@@ -56,7 +56,7 @@ int main() {
                     path[i - 2] = '\0';
                 }
             }
-            char *filePath = &path;
+            char *filePath = (char *) &path;
             message = LD(filePath, &head);
             if (strcmp(message, approved) == 0) {
                 initialize = 0;
@@ -91,7 +91,7 @@ int main() {
                     path[i - 2] = '\0';
                 }
             }
-            char *filePath = &path;
+            char *filePath = (char *) &path;
             message = LD(filePath, &head);
             // QQ function
         }else if(strcmp(qq, function) == 0) {
@@ -123,7 +123,7 @@ int main() {
                 //Otherwise within parameters
             }else{
                 int number = 0;
-                // If it is a 2 digit number
+                // If it is a 2-digit number
                 if(size>2){
                     //Check if both values are numbers and not other characters
                     if(path[0] >= '0' && path[0] <= '9' && path[1] >= '0' && path[1] <= '9'){
@@ -133,7 +133,7 @@ int main() {
                     }else{
                         message = "Input was not only numbers";
                     }
-                    // If it is a 1 digit number
+                    // If it is a 1-digit number
                 }else{
                     //Check if the values is a number and not a character
                     if(path[0] >= '0' && path[0] <= '9'){
@@ -153,7 +153,7 @@ int main() {
                     path[i - 2] = '\0';
                 }
             }
-            char *filePath = &path;
+            char *filePath = (char *) &path;
             message = SD(filePath, &head);
             //SR Function
         }else if(strcmp(sr,function) == 0){

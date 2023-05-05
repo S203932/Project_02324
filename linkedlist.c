@@ -41,7 +41,6 @@ void push (struct Node** head_ref, char value, char suit){
 
 }
 
-
 void insertAt(struct Node** head_ref, int position, char value, char suit){
 
     struct Node *last = *head_ref;
@@ -94,7 +93,7 @@ void reverse(struct Node** head_ref){
     struct Node* prev = NULL;
     struct Node* current  = *head_ref;
     struct Node* next = NULL;
-    struct Node *last = *head_ref;
+    //struct Node *last = *head_ref;
     while(current != NULL){
         // Store next
         next = current->next;
