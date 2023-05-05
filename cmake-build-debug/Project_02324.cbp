@@ -111,16 +111,16 @@
 		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist2.c">
-			<Option target="Project_02324"/>
-		</Unit>
-		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist2.h">
-			<Option target="Project_02324"/>
-		</Unit>
 		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/main.c">
 			<Option target="Project_02324"/>
 		</Unit>
 		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/process_input.h">
+			<Option target="Project_02324"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/sr.c">
+			<Option target="Project_02324"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/sr.h">
 			<Option target="Project_02324"/>
 		</Unit>
 		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/CMakeLists.txt">
