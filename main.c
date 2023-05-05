@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+#include <stdbool.h>
 
 
 #include "boardlist.h"
@@ -31,6 +32,8 @@ int main() {
     char si[] = "SI";
     char sr[] = "SR";
     char sd[] = "SD";
+    char p[] = "P";
+    char q[] = "Q";
     char approved[] = "OK";
     char function[3];
     function[0] = '\0';
@@ -158,10 +161,33 @@ int main() {
             //SR Function
         }else if(strcmp(sr,function) == 0){
             message=SR(&head);
-        } else {
+        }
+        else if(strcmp(p, function) == 0) {
+
+            while (initialize && !quit) {
+                start_board();
+
+                // Getting user input
+                strcpy(tempInput, process_input(message, input));
+                strcpy(input, tempInput);
+                memcpy(function, input, 2);
+                function[0] = input[0];
+                function[1] = input[1];
+
+                // Function to check if a card is on a column
+                bool is_card_on_column(char column[], node* c1, node* c2, node* c3, node* c4, node* c5, node* c6, node c7
+                );
+
+                if(strcmp(q, function)==0){
+                    printf("Quitting game...");
+                    break;
+                }
+
+            }
+        }
+        else {
             message = "Not a valid command.";
         }
     }
-
     return 0;
 }
