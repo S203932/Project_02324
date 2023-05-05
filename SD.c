@@ -30,6 +30,12 @@ char* SD(char* filename, struct Node** head_ref) {
         printf("Error opening file %s\n", filename);
         return "Something went wrong";
     }
+
+    fp = fopen(filename, "a");
+    if (fp == NULL) {
+        printf("Error opening file %s\n", filename);
+        return "Something went wrong";
+    }
     while (last->next != NULL) {
         char value = last->value;
         char suit = last->suit;

@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Lenovo\Desktop\C-lion projekt"
+CMAKE_SOURCE_DIR = C:\Users\urban\CLionProjects\Project_02324
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project_02324.dir/depend.make
@@ -69,102 +69,102 @@ include CMakeFiles/Project_02324.dir/progress.make
 include CMakeFiles/Project_02324.dir/flags.make
 
 CMakeFiles/Project_02324.dir/main.c.obj: CMakeFiles/Project_02324.dir/flags.make
-CMakeFiles/Project_02324.dir/main.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt/main.c
+CMakeFiles/Project_02324.dir/main.c.obj: C:/Users/urban/CLionProjects/Project_02324/main.c
 CMakeFiles/Project_02324.dir/main.c.obj: CMakeFiles/Project_02324.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Project_02324.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/main.c.obj -MF CMakeFiles\Project_02324.dir\main.c.obj.d -o CMakeFiles\Project_02324.dir\main.c.obj -c "C:\Users\Lenovo\Desktop\C-lion projekt\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Project_02324.dir/main.c.obj"
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/main.c.obj -MF CMakeFiles\Project_02324.dir\main.c.obj.d -o CMakeFiles\Project_02324.dir\main.c.obj -c C:\Users\urban\CLionProjects\Project_02324\main.c
 
 CMakeFiles/Project_02324.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project_02324.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Lenovo\Desktop\C-lion projekt\main.c" > CMakeFiles\Project_02324.dir\main.c.i
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\urban\CLionProjects\Project_02324\main.c > CMakeFiles\Project_02324.dir\main.c.i
 
 CMakeFiles/Project_02324.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project_02324.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Lenovo\Desktop\C-lion projekt\main.c" -o CMakeFiles\Project_02324.dir\main.c.s
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\urban\CLionProjects\Project_02324\main.c -o CMakeFiles\Project_02324.dir\main.c.s
 
 CMakeFiles/Project_02324.dir/ld.c.obj: CMakeFiles/Project_02324.dir/flags.make
-CMakeFiles/Project_02324.dir/ld.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt/ld.c
+CMakeFiles/Project_02324.dir/ld.c.obj: C:/Users/urban/CLionProjects/Project_02324/ld.c
 CMakeFiles/Project_02324.dir/ld.c.obj: CMakeFiles/Project_02324.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Project_02324.dir/ld.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/ld.c.obj -MF CMakeFiles\Project_02324.dir\ld.c.obj.d -o CMakeFiles\Project_02324.dir\ld.c.obj -c "C:\Users\Lenovo\Desktop\C-lion projekt\ld.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Project_02324.dir/ld.c.obj"
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/ld.c.obj -MF CMakeFiles\Project_02324.dir\ld.c.obj.d -o CMakeFiles\Project_02324.dir\ld.c.obj -c C:\Users\urban\CLionProjects\Project_02324\ld.c
 
 CMakeFiles/Project_02324.dir/ld.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project_02324.dir/ld.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Lenovo\Desktop\C-lion projekt\ld.c" > CMakeFiles\Project_02324.dir\ld.c.i
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\urban\CLionProjects\Project_02324\ld.c > CMakeFiles\Project_02324.dir\ld.c.i
 
 CMakeFiles/Project_02324.dir/ld.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project_02324.dir/ld.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Lenovo\Desktop\C-lion projekt\ld.c" -o CMakeFiles\Project_02324.dir\ld.c.s
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\urban\CLionProjects\Project_02324\ld.c -o CMakeFiles\Project_02324.dir\ld.c.s
 
 CMakeFiles/Project_02324.dir/linkedlist.c.obj: CMakeFiles/Project_02324.dir/flags.make
-CMakeFiles/Project_02324.dir/linkedlist.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt/linkedlist.c
+CMakeFiles/Project_02324.dir/linkedlist.c.obj: C:/Users/urban/CLionProjects/Project_02324/linkedlist.c
 CMakeFiles/Project_02324.dir/linkedlist.c.obj: CMakeFiles/Project_02324.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Project_02324.dir/linkedlist.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/linkedlist.c.obj -MF CMakeFiles\Project_02324.dir\linkedlist.c.obj.d -o CMakeFiles\Project_02324.dir\linkedlist.c.obj -c "C:\Users\Lenovo\Desktop\C-lion projekt\linkedlist.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Project_02324.dir/linkedlist.c.obj"
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/linkedlist.c.obj -MF CMakeFiles\Project_02324.dir\linkedlist.c.obj.d -o CMakeFiles\Project_02324.dir\linkedlist.c.obj -c C:\Users\urban\CLionProjects\Project_02324\linkedlist.c
 
 CMakeFiles/Project_02324.dir/linkedlist.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project_02324.dir/linkedlist.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Lenovo\Desktop\C-lion projekt\linkedlist.c" > CMakeFiles\Project_02324.dir\linkedlist.c.i
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\urban\CLionProjects\Project_02324\linkedlist.c > CMakeFiles\Project_02324.dir\linkedlist.c.i
 
 CMakeFiles/Project_02324.dir/linkedlist.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project_02324.dir/linkedlist.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Lenovo\Desktop\C-lion projekt\linkedlist.c" -o CMakeFiles\Project_02324.dir\linkedlist.c.s
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\urban\CLionProjects\Project_02324\linkedlist.c -o CMakeFiles\Project_02324.dir\linkedlist.c.s
 
 CMakeFiles/Project_02324.dir/boardlist.c.obj: CMakeFiles/Project_02324.dir/flags.make
-CMakeFiles/Project_02324.dir/boardlist.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt/boardlist.c
+CMakeFiles/Project_02324.dir/boardlist.c.obj: C:/Users/urban/CLionProjects/Project_02324/boardlist.c
 CMakeFiles/Project_02324.dir/boardlist.c.obj: CMakeFiles/Project_02324.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Project_02324.dir/boardlist.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/boardlist.c.obj -MF CMakeFiles\Project_02324.dir\boardlist.c.obj.d -o CMakeFiles\Project_02324.dir\boardlist.c.obj -c "C:\Users\Lenovo\Desktop\C-lion projekt\boardlist.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Project_02324.dir/boardlist.c.obj"
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/boardlist.c.obj -MF CMakeFiles\Project_02324.dir\boardlist.c.obj.d -o CMakeFiles\Project_02324.dir\boardlist.c.obj -c C:\Users\urban\CLionProjects\Project_02324\boardlist.c
 
 CMakeFiles/Project_02324.dir/boardlist.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project_02324.dir/boardlist.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Lenovo\Desktop\C-lion projekt\boardlist.c" > CMakeFiles\Project_02324.dir\boardlist.c.i
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\urban\CLionProjects\Project_02324\boardlist.c > CMakeFiles\Project_02324.dir\boardlist.c.i
 
 CMakeFiles/Project_02324.dir/boardlist.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project_02324.dir/boardlist.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Lenovo\Desktop\C-lion projekt\boardlist.c" -o CMakeFiles\Project_02324.dir\boardlist.c.s
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\urban\CLionProjects\Project_02324\boardlist.c -o CMakeFiles\Project_02324.dir\boardlist.c.s
 
 CMakeFiles/Project_02324.dir/SI.c.obj: CMakeFiles/Project_02324.dir/flags.make
-CMakeFiles/Project_02324.dir/SI.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt/SI.c
+CMakeFiles/Project_02324.dir/SI.c.obj: C:/Users/urban/CLionProjects/Project_02324/SI.c
 CMakeFiles/Project_02324.dir/SI.c.obj: CMakeFiles/Project_02324.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Project_02324.dir/SI.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/SI.c.obj -MF CMakeFiles\Project_02324.dir\SI.c.obj.d -o CMakeFiles\Project_02324.dir\SI.c.obj -c "C:\Users\Lenovo\Desktop\C-lion projekt\SI.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Project_02324.dir/SI.c.obj"
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/SI.c.obj -MF CMakeFiles\Project_02324.dir\SI.c.obj.d -o CMakeFiles\Project_02324.dir\SI.c.obj -c C:\Users\urban\CLionProjects\Project_02324\SI.c
 
 CMakeFiles/Project_02324.dir/SI.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project_02324.dir/SI.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Lenovo\Desktop\C-lion projekt\SI.c" > CMakeFiles\Project_02324.dir\SI.c.i
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\urban\CLionProjects\Project_02324\SI.c > CMakeFiles\Project_02324.dir\SI.c.i
 
 CMakeFiles/Project_02324.dir/SI.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project_02324.dir/SI.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Lenovo\Desktop\C-lion projekt\SI.c" -o CMakeFiles\Project_02324.dir\SI.c.s
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\urban\CLionProjects\Project_02324\SI.c -o CMakeFiles\Project_02324.dir\SI.c.s
 
 CMakeFiles/Project_02324.dir/SD.c.obj: CMakeFiles/Project_02324.dir/flags.make
-CMakeFiles/Project_02324.dir/SD.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt/SD.c
+CMakeFiles/Project_02324.dir/SD.c.obj: C:/Users/urban/CLionProjects/Project_02324/SD.c
 CMakeFiles/Project_02324.dir/SD.c.obj: CMakeFiles/Project_02324.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Project_02324.dir/SD.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/SD.c.obj -MF CMakeFiles\Project_02324.dir\SD.c.obj.d -o CMakeFiles\Project_02324.dir\SD.c.obj -c "C:\Users\Lenovo\Desktop\C-lion projekt\SD.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Project_02324.dir/SD.c.obj"
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/SD.c.obj -MF CMakeFiles\Project_02324.dir\SD.c.obj.d -o CMakeFiles\Project_02324.dir\SD.c.obj -c C:\Users\urban\CLionProjects\Project_02324\SD.c
 
 CMakeFiles/Project_02324.dir/SD.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project_02324.dir/SD.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Lenovo\Desktop\C-lion projekt\SD.c" > CMakeFiles\Project_02324.dir\SD.c.i
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\urban\CLionProjects\Project_02324\SD.c > CMakeFiles\Project_02324.dir\SD.c.i
 
 CMakeFiles/Project_02324.dir/SD.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project_02324.dir/SD.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Lenovo\Desktop\C-lion projekt\SD.c" -o CMakeFiles\Project_02324.dir\SD.c.s
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\urban\CLionProjects\Project_02324\SD.c -o CMakeFiles\Project_02324.dir\SD.c.s
 
 CMakeFiles/Project_02324.dir/sr.c.obj: CMakeFiles/Project_02324.dir/flags.make
-CMakeFiles/Project_02324.dir/sr.c.obj: C:/Users/Lenovo/Desktop/C-lion\ projekt/sr.c
+CMakeFiles/Project_02324.dir/sr.c.obj: C:/Users/urban/CLionProjects/Project_02324/sr.c
 CMakeFiles/Project_02324.dir/sr.c.obj: CMakeFiles/Project_02324.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Project_02324.dir/sr.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/sr.c.obj -MF CMakeFiles\Project_02324.dir\sr.c.obj.d -o CMakeFiles\Project_02324.dir\sr.c.obj -c "C:\Users\Lenovo\Desktop\C-lion projekt\sr.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Project_02324.dir/sr.c.obj"
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_02324.dir/sr.c.obj -MF CMakeFiles\Project_02324.dir\sr.c.obj.d -o CMakeFiles\Project_02324.dir\sr.c.obj -c C:\Users\urban\CLionProjects\Project_02324\sr.c
 
 CMakeFiles/Project_02324.dir/sr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project_02324.dir/sr.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Lenovo\Desktop\C-lion projekt\sr.c" > CMakeFiles\Project_02324.dir\sr.c.i
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\urban\CLionProjects\Project_02324\sr.c > CMakeFiles\Project_02324.dir\sr.c.i
 
 CMakeFiles/Project_02324.dir/sr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project_02324.dir/sr.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Lenovo\Desktop\C-lion projekt\sr.c" -o CMakeFiles\Project_02324.dir\sr.c.s
+	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\urban\CLionProjects\Project_02324\sr.c -o CMakeFiles\Project_02324.dir\sr.c.s
 
 # Object files for target Project_02324
 Project_02324_OBJECTS = \
@@ -190,7 +190,7 @@ Project_02324.exe: CMakeFiles/Project_02324.dir/build.make
 Project_02324.exe: CMakeFiles/Project_02324.dir/linkLibs.rsp
 Project_02324.exe: CMakeFiles/Project_02324.dir/objects1
 Project_02324.exe: CMakeFiles/Project_02324.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Project_02324.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Project_02324.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project_02324.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -202,6 +202,6 @@ CMakeFiles/Project_02324.dir/clean:
 .PHONY : CMakeFiles/Project_02324.dir/clean
 
 CMakeFiles/Project_02324.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Lenovo\Desktop\C-lion projekt" "C:\Users\Lenovo\Desktop\C-lion projekt" "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug" "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug" "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles\Project_02324.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\urban\CLionProjects\Project_02324 C:\Users\urban\CLionProjects\Project_02324 C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles\Project_02324.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Project_02324.dir/depend
 
