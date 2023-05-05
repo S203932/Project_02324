@@ -1,25 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
-struct CardList{
-    char suit;
-    char value;
-    struct CardList*next;
-    struct CardList*prev;
-};
 
-typedef struct {
-    struct CardList *head;
-    struct CardList *tail;
-    int size;
-} Linked_list;
+struct Node;
 
-Linked_list *CreateLinkedList();
+void clearNewValue(struct Node** head_ref, char value, char suit);
 
-void PrependCard(Linked_list *list, struct CardList);
+void push (struct Node** head_ref, char value, char suit);
 
-void InsertCard(Linked_list *list, struct CardList* prev_node, struct CardList);
+void append(struct Node** head_ref, char value, char suit);
 
-void AppendCard(Linked_list *list, struct CardList);
+void reverse(struct Node** head_ref);
+
+void insertAt(struct Node** head_ref, int position, char value, char suit);
 

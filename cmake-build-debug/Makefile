@@ -248,30 +248,6 @@ linkedlist.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist.c.s
 .PHONY : linkedlist.c.s
 
-linkedlist2.obj: linkedlist2.c.obj
-.PHONY : linkedlist2.obj
-
-# target to build an object file
-linkedlist2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist2.c.obj
-.PHONY : linkedlist2.c.obj
-
-linkedlist2.i: linkedlist2.c.i
-.PHONY : linkedlist2.i
-
-# target to preprocess a source file
-linkedlist2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist2.c.i
-.PHONY : linkedlist2.c.i
-
-linkedlist2.s: linkedlist2.c.s
-.PHONY : linkedlist2.s
-
-# target to generate assembly for a file
-linkedlist2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist2.c.s
-.PHONY : linkedlist2.c.s
-
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -295,6 +271,30 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/main.c.s
 .PHONY : main.c.s
+
+sr.obj: sr.c.obj
+.PHONY : sr.obj
+
+# target to build an object file
+sr.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/sr.c.obj
+.PHONY : sr.c.obj
+
+sr.i: sr.c.i
+.PHONY : sr.i
+
+# target to preprocess a source file
+sr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/sr.c.i
+.PHONY : sr.c.i
+
+sr.s: sr.c.s
+.PHONY : sr.s
+
+# target to generate assembly for a file
+sr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/sr.c.s
+.PHONY : sr.c.s
 
 # Help Target
 help:
@@ -320,12 +320,12 @@ help:
 	@echo ... linkedlist.obj
 	@echo ... linkedlist.i
 	@echo ... linkedlist.s
-	@echo ... linkedlist2.obj
-	@echo ... linkedlist2.i
-	@echo ... linkedlist2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... sr.obj
+	@echo ... sr.i
+	@echo ... sr.s
 .PHONY : help
 
 

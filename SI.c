@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "linkedlist2.h"
+#include "linkedlist.h"
 typedef struct Node{
     char value;
     char suit;
