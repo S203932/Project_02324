@@ -8,12 +8,13 @@
 #include "ld.h"
 #include "process_input.h"
 #include "linkedlist.h"
-//#include "Card.h"
+#include "linkedlist2.h"
 #include "SD.h"
 #include "SI.h"
 #include "sr.h"
 
 typedef struct node node;
+
 
 int main() {
     // Need to change the working directory, but only once
@@ -33,13 +34,16 @@ int main() {
     char sr[] = "SR";
     char sd[] = "SD";
     char p[] = "P";
-    char q[] = "Q";
+    char q[] = "Q\0";
     char approved[] = "OK";
     char function[3];
     function[0] = '\0';
     function[1] = '\0';
     function[2] = '\0';
+    struct Node* head_copy_p = NULL;
+    struct Node* temp = NULL;
     struct Node* head = NULL;
+    struct LinkedList* head_l = NULL;
 
 
     //Loop that runs until cards is loaded successfully from txt via LD function
@@ -164,8 +168,22 @@ int main() {
         }
         else if(strcmp(p, function) == 0) {
 
+
+            // Making a copy of the list and using it during the play phase
+            temp = head;
+            append(&head_copy_p,temp->value,temp->suit);
+            while(temp->next != NULL){
+                temp = temp->next;
+                append(&head_copy_p,temp->value,temp->suit);
+            }
+
+            //Using the new copy to initialize columns
+            clearNewValueL(&head_l,*head_copy_p);
+            initializePlayList(&head_l);
+            message = "OK";
+
             while (initialize && !quit) {
-                start_board();
+                initial_play_board(head);
 
                 // Getting user input
                 strcpy(tempInput, process_input(message, input));
@@ -180,7 +198,10 @@ int main() {
 
                 if(strcmp(q, function)==0){
                     printf("Quitting game...");
+                    message = "OK";
                     break;
+                }else{
+                    message = "Not a valid command";
                 }
 
             }

@@ -30,7 +30,6 @@ char* LD(char *filename, struct Node **node){
     do {
         fgets(card,5,file);
         append(node,card[0],card[1]);
-        //push(node,card[0],card[1]);
         counter++;
     } while (counter<52);
     fclose(file);

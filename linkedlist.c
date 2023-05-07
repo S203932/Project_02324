@@ -61,6 +61,28 @@ void insertAt(struct Node** head_ref, int position, char value, char suit){
 
 }
 
+struct Node cutOfAtPosition(struct Node** head_ref, int position){
+
+    struct Node *last = *head_ref;
+    struct Node *temp;
+    int counter = 0;
+
+    while(counter < (position-1)){
+        last = last->next;
+        counter++;
+    }
+
+    temp = last->next;
+    last->next =NULL;
+
+
+    return *temp;
+
+}
+
+
+
+
 /* Given a reference (pointer to pointer) to the head
    of a list a Char, appends a new node at the end */
 void append(struct Node** head_ref, char value, char suit){
@@ -103,4 +125,12 @@ void reverse(struct Node** head_ref){
         current = next;
     }
     *head_ref = prev;
+}
+
+void printList (struct Node* node){
+    while(node != NULL){
+        printf("%c%c\n",node->value,node->suit);
+        node = node->next;
+    }
+    printf("\n");
 }

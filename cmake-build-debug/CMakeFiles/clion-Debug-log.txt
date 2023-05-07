@@ -1,10 +1,4 @@
-C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\urban\CLionProjects\Project_02324 -B C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug
--- The C compiler identification is GNU 11.2.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/gcc.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
+"C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Bruger\CLionProjects\Project_02324 -B C:\Users\Bruger\CLionProjects\Project_02324\cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug
+-- Build files have been written to: C:/Users/Bruger/CLionProjects/Project_02324/cmake-build-debug
