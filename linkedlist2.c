@@ -293,9 +293,11 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
     struct LinkedList* destination_p = *head_ref_l;
     struct Node* des_node_p;
     struct Node* ori_node_p;
+    struct Node *node_temp = (struct Node*) malloc(sizeof(struct Node));;
 
     int counter = 0;
-
+    int o_empty = 0;
+    int d_empty = 0;
     while(counter<(from-1)){
         origin = *origin.next;
         origin_p = origin_p->next;
@@ -304,6 +306,9 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
 
     ori_node_p = &origin_p->node;
 
+    if(origin.node.next == NULL){
+        o_empty = 1;
+    }
 
     while(origin.node.next!= NULL){
         origin.node = *origin.node.next;
@@ -323,6 +328,10 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
     }
 
     des_node_p = &destination_p->node;
+
+    if(destination.node.value == '\0' || destination.node.suit == '0'){
+        d_empty = 1;
+    }
 
     while(destination.node.next != NULL){
         destination.node = *destination.node.next;
@@ -358,12 +367,27 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
     }else{
         ori_value = ori_value-48;
     }
+    if(d_empty){
+       des_node_p->value = ori_node_p->next->value;
+       des_node_p->suit = ori_node_p->next->suit;
+       des_node_p->next = NULL;
+       ori_node_p->next = NULL;
 
 
-    if(destination.node.suit != origin.node.suit){
+    }else if(destination.node.suit != origin.node.suit){
 
         if(des_value-ori_value == 1){
             des_node_p->next = ori_node_p->next;
+            if(o_empty){
+                node_temp->value = ori_node_p->value;
+                node_temp->suit = ori_node_p->suit;
+                node_temp->next = NULL;
+                des_node_p->next = node_temp;
+                ori_node_p->value = '\0';
+                ori_node_p->suit = '\0';
+                ori_node_p->next = NULL;
+
+            }
             ori_node_p->next = NULL;
 
         }else{

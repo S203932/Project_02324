@@ -182,9 +182,12 @@ int main() {
             initializePlayList(&head_l);
             message = "OK";
 
+            moveFromCToC(&head_l, 1,7);
+            moveFromCToC(&head_l,3,1);
+            moveFromCToC(&head_l,2,5);
             while (initialize && !quit) {
                 initial_play_board(head);
-
+                printListL(head_l);
                 // Getting user input
                 strcpy(tempInput, process_input(message, input));
                 strcpy(input, tempInput);
