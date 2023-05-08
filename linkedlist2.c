@@ -25,8 +25,10 @@ int convertValue(char value){
         return 12;
     }else if(value == 'K'){
         return 13;
+    }else if(value == '\0') {
+        return 0;
     }else{
-        return value-48;
+            return value-48;
     }
 }
 
@@ -303,13 +305,13 @@ void clearNewValueL(struct LinkedList** head_ref_l,struct Node head_ref){
 }
 
 char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
-    if(from > 8 || from < 1){
+    /*if(from > 8 || from < 1){
         return "Invalid origin value";
     }else if(to > 8 || to < 1){
         return "Invalid destination value";
     }else if (from == to){
         return "Cannot move card to same column";
-    }
+    }*/
 
     char* message = "OK";
     struct LinkedList origin = **head_ref_l;
@@ -563,6 +565,138 @@ char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char valu
     return message;
 
 }
+
+
+
+char* moveCardFromCToF(struct LinkedList** head_ref_l,int from,int to, char value, char suit){
+    char* message = "OK\0";
+    struct LinkedList origin = **head_ref_l;
+    struct LinkedList* origin_p = *head_ref_l;
+    struct LinkedList destination = **head_ref_l;
+    struct LinkedList* destination_p = *head_ref_l;
+    struct Node* des_node_p;
+    struct Node* ori_node_p;
+    struct Node *node_temp = (struct Node*) malloc(sizeof(struct Node));
+
+    int counter = 0;
+    int o_empty = 0;
+    int d_empty = 0;
+    int no_card = 0;
+    int no_consecutive = 0;
+    int no_given = 0;
+
+    if(value == '\0' && suit == '\0'){
+        no_given = 1;
+    }
+
+
+    while(counter<(from-1)){
+        origin = *origin.next;
+        origin_p = origin_p->next;
+        counter++;
+    }
+
+    ori_node_p = &origin_p->node;
+
+    if(origin.node.next == NULL || (origin.node.value == value && origin.node.suit == suit)){
+        o_empty = 1;
+        if(origin.node.value == "\0" || origin.node.suit == '\0'){
+            no_card = 1;
+        }
+    }
+
+    while((origin.node.value != value || origin.node.suit != suit) && !no_card && !no_given){
+        if(ori_node_p->next != NULL && (ori_node_p->next->value != value || ori_node_p->next->suit != suit)){
+            ori_node_p = ori_node_p->next;
+        }
+        if(origin.node.next != NULL){
+            origin.node = *origin.node.next;
+        }
+
+
+        if (origin.node.next == NULL && (origin.node.value != value || origin.node.suit != suit)){
+            no_card = 1;
+        }
+    }
+
+    if(no_given){
+        while(origin.node.next!= NULL){
+            origin.node = *origin.node.next;
+            if(origin.node.next != NULL){
+                ori_node_p = ori_node_p->next;
+            }
+        }
+    }
+
+    if(no_card){
+        return "Card was not in the given column\0";
+    }
+
+
+
+
+    counter = 0;
+
+    while(counter<(to-1)){
+        destination = *destination.next;
+        destination_p = destination_p->next;
+        counter++;
+    }
+
+    des_node_p = &destination_p->node;
+
+    if(destination.node.value == '\0' || destination.node.suit == '\0'){
+        d_empty = 1;
+    }
+
+    while(destination.node.next != NULL){
+        destination.node = *destination.node.next;
+        des_node_p = des_node_p->next;
+    }
+
+    int des_value = convertValue(des_node_p->value);
+
+    int ori_value = convertValue(origin.node.value);
+
+    if(d_empty){
+        des_node_p->value = ori_node_p->next->value;
+        des_node_p->suit = ori_node_p->next->suit;
+        des_node_p->next = NULL;
+        ori_node_p->next = NULL;
+        return message;
+
+    }else if(destination.node.suit == origin.node.suit){
+        if(ori_value-des_value == 1){
+            des_node_p->next = ori_node_p->next;
+            if(o_empty){
+                node_temp->value = ori_node_p->value;
+                node_temp->suit = ori_node_p->suit;
+                node_temp->next = NULL;
+                des_node_p->next = node_temp;
+                ori_node_p->value = '\0';
+                ori_node_p->suit = '\0';
+                ori_node_p->next = NULL;
+
+            }
+            ori_node_p->next = NULL;
+
+        }else{
+            message = "Invalid move, Cards are not in order\0";
+        }
+    } else{
+        message = "Invalid move, Cards are not of same suit\0";
+    }
+
+    return message;
+
+
+
+
+
+
+
+}
+
 
 
 void insertAtL(struct LinkedList** head_ref_l,struct Node head_ref, int position){

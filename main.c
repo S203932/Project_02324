@@ -30,12 +30,19 @@ int main() {
     char sr[] = "SR";
     char sd[] = "SD";
     char p[] = "P";
-    char q[] = "Q\0";
+    char q[] = "Q";
     char approved[] = "OK";
     char function[3];
     function[0] = '\0';
     function[1] = '\0';
     function[2] = '\0';
+    char move[10];
+    int counter = 0;
+    while(counter<10){
+        move[counter] = '\0';
+        counter++;
+    }
+    counter = 0;
     struct Node* head_copy_p = NULL;
     struct Node* temp = NULL;
     struct Node* head = NULL;
@@ -48,8 +55,6 @@ int main() {
         strcpy(tempInput, process_input(message, input));
         strcpy(input, tempInput);
         memcpy(function, input, 2);
-        function[0] = input[0];
-        function[1] = input[1];
         // The if statements is for the various functions available
         if (strcmp(ld, function) == 0) {
             char path[strlen(input) - 2];
@@ -68,21 +73,18 @@ int main() {
             initialize = 0;
             quit = 1;
         }else{
-            message = "Not a valid command, only LD or QQ is valid.";
+            message = "Not a valid command, only LD or QQ is valid.\0";
         }
     }
 
-    // Resetting the initialize for next while loop
-    initialize = 1;
-    while(initialize && !quit){
+
+    while(!quit){
         if(strcmp(sw, function) != 0){
             empty_board();
         }
         strcpy(tempInput, process_input(message, input));
         strcpy(input, tempInput);
         memcpy(function, input, 2);
-        function[0] = input[0];
-        function[1] = input[1];
         // The if statements is for the various functions available
         // LD function
         if (strcmp(ld, function) == 0) {
@@ -98,7 +100,6 @@ int main() {
             message = LD(filePath, &head);
             // QQ function
         }else if(strcmp(qq, function) == 0) {
-            initialize = 0;
             quit = 1;
             // SW Function
         }else if(strcmp(sw, function) == 0) {
@@ -117,7 +118,7 @@ int main() {
             int size = sizeof(path) / sizeof(path[0]);
             //Value is too big
             if(size>3){
-                message = "Split value invalid";
+                message = "Split value invalid\0";
                 //Value is none
             }else if(size<=1){
                 int randomnumber;
@@ -134,7 +135,7 @@ int main() {
                         number+=path[1]-48;
                         message = SI(number, &head);
                     }else{
-                        message = "Input was not only numbers";
+                        message = "Input was not only numbers\0";
                     }
                     // If it is a 1-digit number
                 }else{
@@ -143,7 +144,7 @@ int main() {
                         number = path[0]-48;
                         message = SI(number, &head);
                     }else{
-                        message = "Input was not only numbers";
+                        message = "Input was not only numbers\0";
                     }
                 }
             }
@@ -162,6 +163,7 @@ int main() {
         }else if(strcmp(sr,function) == 0){
             message=SR(&head);
         }
+
         else if(strcmp(p, function) == 0) {
 
             // Making a copy of the list and using it during the play phase
@@ -175,39 +177,47 @@ int main() {
             //Using the new copy to initialize columns
             clearNewValueL(&head_l,*head_copy_p);
             initializePlayList(&head_l);
-            message = "OK";
+            message = "OK\0";
 
             //moveFromCToC(&head_l, 1,7);
             //moveFromCToC(&head_l,3,1);
             //moveFromCToC(&head_l,2,5);
-            //char card[] = "KH\0";
-            //  message = moveCardFromCToC(&head_l, 5, 1,card[0],card[1]);
-            while (initialize && !quit) {;
+            //char card[] = "\0\0";
+            //message = moveCardFromCToC(&head_l, 4, 7,card[0],card[1]);
+            //message = moveCardFromCToF(&head_l, 6,8,card[0],card[1]);
+            //message = moveFromCToC(&head_l,8,4);
+            //message = moveCardFromCToF(&head_l, 6,8,card[0],card[1]);
+
+
+
+            while (!quit) {;
                 play_board(head_l);
                 // Getting user input
                 strcpy(tempInput, process_input(message, input));
                 strcpy(input, tempInput);
                 memcpy(function, input, 2);
-                function[0] = input[0];
-                function[1] = input[1];
+                memcpy(move, input, 9);
+
 
                 //display error message on commands during play phase
                 if ((strcmp(ld, function)) == 0 || (strcmp(sw, function)) == 0
                     || (strcmp(qq, function)) == 0 || (strcmp(si, function)) == 0 || (strcmp(sr, "LD")) == 0
                     || (strcmp(sd, function)) == 0 || (strcmp(p, function)) == 0) {
-                    message = "this is not available in the play phase";
+                    message = "Command not available at this point\0";
                 }
                 // quit the game and reset game variables.
                 else if (strcmp(q, function) == 0) {
-                    message = " Quitting the game..";
-                    //clearNewValueL(&head_l,*head_copy_p);
-                    break;
+                    message = "OK\0";
+                    quit = 1;
                 }
 
                 else {
-                    message = "Unknown command";
+                    message = "Unknown command\0";
                 }
             }
+            quit = 0;
+        }else{
+            message="Invalid command\0";
         }
 
     }

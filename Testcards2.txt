@@ -27,7 +27,7 @@ AD
 4C
 8D
 5H
-2C
+QD
 AH
 JH
 3D
@@ -45,7 +45,7 @@ KH
 TS
 KS
 QC
-QD
+2C
 KC
 AC
 9S
