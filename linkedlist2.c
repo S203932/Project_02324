@@ -329,7 +329,7 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
 
     des_node_p = &destination_p->node;
 
-    if(destination.node.value == '\0' || destination.node.suit == '0'){
+    if(destination.node.value == '\0' || destination.node.suit == '\0'){
         d_empty = 1;
     }
 

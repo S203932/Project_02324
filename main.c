@@ -10,7 +10,6 @@
 #include "SI.h"
 #include "sr.h"
 
-typedef struct node node;
 
 
 int main() {
@@ -167,7 +166,7 @@ int main() {
 
             // Making a copy of the list and using it during the play phase
             temp = head;
-            append(&head_copy_p,temp->value,temp->suit);
+            clearNewValue(&head_copy_p,temp->value,temp->suit);
             while(temp->next != NULL){
                 temp = temp->next;
                 append(&head_copy_p,temp->value,temp->suit);
@@ -178,12 +177,11 @@ int main() {
             initializePlayList(&head_l);
             message = "OK";
 
-            moveFromCToC(&head_l, 1,7);
-            moveFromCToC(&head_l,3,1);
-            moveFromCToC(&head_l,2,5);
-            while (initialize && !quit) {
-                initial_play_board(head);
-                printListL(head_l);
+            //moveFromCToC(&head_l, 1,7);
+            //moveFromCToC(&head_l,3,1);
+            //moveFromCToC(&head_l,2,5);
+            while (initialize && !quit) {;
+                play_board(head_l);
                 // Getting user input
                 strcpy(tempInput, process_input(message, input));
                 strcpy(input, tempInput);
@@ -200,7 +198,7 @@ int main() {
                 // quit the game and reset game variables.
                 else if (strcmp(q, function) == 0) {
                     message = " Quitting the game..";
-                    clearNewValueL(&head_l,*head_copy_p);
+                    //clearNewValueL(&head_l,*head_copy_p);
                     break;
                 }
 
