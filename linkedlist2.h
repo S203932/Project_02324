@@ -21,3 +21,7 @@ void initializePlayList(struct LinkedList** head_ref_l);
 
 char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to);
 
+char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char value, char suit);
+
+int convertValue(char value);
+

@@ -180,6 +180,8 @@ int main() {
             //moveFromCToC(&head_l, 1,7);
             //moveFromCToC(&head_l,3,1);
             //moveFromCToC(&head_l,2,5);
+            //char card[] = "KH\0";
+            //  message = moveCardFromCToC(&head_l, 5, 1,card[0],card[1]);
             while (initialize && !quit) {;
                 play_board(head_l);
                 // Getting user input
