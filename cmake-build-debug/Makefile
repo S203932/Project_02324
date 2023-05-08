@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\urban\CLionProjects\Project_02324
+CMAKE_SOURCE_DIR = "C:\Users\Lenovo\Desktop\C-lion projekt"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\urban\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\urban\CLionProjects\Project_02324\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo\Desktop\C-lion projekt\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -248,6 +248,30 @@ linkedlist.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist.c.s
 .PHONY : linkedlist.c.s
 
+linkedlist2.obj: linkedlist2.c.obj
+.PHONY : linkedlist2.obj
+
+# target to build an object file
+linkedlist2.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist2.c.obj
+.PHONY : linkedlist2.c.obj
+
+linkedlist2.i: linkedlist2.c.i
+.PHONY : linkedlist2.i
+
+# target to preprocess a source file
+linkedlist2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist2.c.i
+.PHONY : linkedlist2.c.i
+
+linkedlist2.s: linkedlist2.c.s
+.PHONY : linkedlist2.s
+
+# target to generate assembly for a file
+linkedlist2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_02324.dir\build.make CMakeFiles/Project_02324.dir/linkedlist2.c.s
+.PHONY : linkedlist2.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -320,6 +344,9 @@ help:
 	@echo ... linkedlist.obj
 	@echo ... linkedlist.i
 	@echo ... linkedlist.s
+	@echo ... linkedlist2.obj
+	@echo ... linkedlist2.i
+	@echo ... linkedlist2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

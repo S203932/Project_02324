@@ -8,120 +8,128 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_02324">
-				<Option output="C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Project_02324.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug"/>
+				<Option output="C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Project_02324.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_02324"/>
-					<CompileFile command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_02324"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_02324/fast">
-				<Option output="C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Project_02324.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug"/>
+				<Option output="C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Project_02324.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_02324/fast"/>
-					<CompileFile command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_02324/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/urban/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/urban/CLionProjects/Project_02324/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Lenovo/Desktop/C-lion projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/Card.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/Card.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/SD.c">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/SD.c">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/SD.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/SD.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/SI.c">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/SI.c">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/SI.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/SI.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/boardlist.c">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/boardlist.c">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/boardlist.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/boardlist.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/ld.c">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/ld.c">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/ld.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/ld.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/linkedlist.c">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist.c">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/linkedlist.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/main.c">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist2.c">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/process_input.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/linkedlist2.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/sr.c">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/main.c">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/sr.h">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/process_input.h">
 			<Option target="Project_02324"/>
 		</Unit>
-		<Unit filename="C:/Users/urban/CLionProjects/Project_02324/CMakeLists.txt">
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/sr.c">
+			<Option target="Project_02324"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/sr.h">
+			<Option target="Project_02324"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/C-lion projekt/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

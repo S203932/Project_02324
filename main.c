@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
-#include <stdbool.h>
-
-
 #include "boardlist.h"
 #include "ld.h"
 #include "process_input.h"
@@ -168,7 +165,6 @@ int main() {
         }
         else if(strcmp(p, function) == 0) {
 
-
             // Making a copy of the list and using it during the play phase
             temp = head;
             append(&head_copy_p,temp->value,temp->suit);
@@ -195,23 +191,28 @@ int main() {
                 function[0] = input[0];
                 function[1] = input[1];
 
-                // Function to check if a card is on a column
-                bool is_card_on_column(char column[], node* c1, node* c2, node* c3, node* c4, node* c5, node* c6, node c7
-                );
-
-                if(strcmp(q, function)==0){
-                    printf("Quitting game...");
-                    message = "OK";
+                //display error message on commands during play phase
+                if ((strcmp(ld, function)) == 0 || (strcmp(sw, function)) == 0
+                    || (strcmp(qq, function)) == 0 || (strcmp(si, function)) == 0 || (strcmp(sr, "LD")) == 0
+                    || (strcmp(sd, function)) == 0 || (strcmp(p, function)) == 0) {
+                    message = "this is not available in the play phase";
+                }
+                // quit the game and reset game variables.
+                else if (strcmp(q, function) == 0) {
+                    message = " Quitting the game..";
+                    clearNewValueL(&head_l,*head_copy_p);
                     break;
-                }else{
-                    message = "Not a valid command";
                 }
 
+                else {
+                    message = "Unknown command";
+                }
             }
         }
-        else {
-            message = "Not a valid command.";
-        }
+
     }
     return 0;
 }
+
+
+

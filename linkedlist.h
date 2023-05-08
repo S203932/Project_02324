@@ -17,3 +17,4 @@ void insertAt(struct Node** head_ref, int position, char value, char suit);
 void printList (struct Node* node);
 
 struct Node cutOfAtPosition(struct Node** head_ref, int position);
+
