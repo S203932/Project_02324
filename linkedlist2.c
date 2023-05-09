@@ -305,13 +305,6 @@ void clearNewValueL(struct LinkedList** head_ref_l,struct Node head_ref){
 }
 
 char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
-    /*if(from > 8 || from < 1){
-        return "Invalid origin value";
-    }else if(to > 8 || to < 1){
-        return "Invalid destination value";
-    }else if (from == to){
-        return "Cannot move card to same column";
-    }*/
 
     char* message = "OK";
     struct LinkedList origin = **head_ref_l;
@@ -320,7 +313,8 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
     struct LinkedList* destination_p = *head_ref_l;
     struct Node* des_node_p;
     struct Node* ori_node_p;
-    struct Node *node_temp = (struct Node*) malloc(sizeof(struct Node));;
+    struct Node *node_temp = (struct Node*) malloc(sizeof(struct Node));
+    struct Node *node_temp2 = (struct Node*) malloc(sizeof(struct Node));
 
     int counter = 0;
     int o_empty = 0;
@@ -395,10 +389,20 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
         ori_value = ori_value-48;
     }
     if(d_empty){
-       des_node_p->value = ori_node_p->next->value;
-       des_node_p->suit = ori_node_p->next->suit;
-       des_node_p->next = NULL;
-       ori_node_p->next = NULL;
+        if(ori_node_p->next !=NULL){
+            des_node_p->value = ori_node_p->next->value;
+            des_node_p->suit = ori_node_p->next->suit;
+            des_node_p->next = NULL;
+            ori_node_p->next = NULL;
+        }else{
+            des_node_p->value = ori_node_p->value;
+            des_node_p->suit = ori_node_p->suit;
+            des_node_p->next = NULL;
+            ori_node_p->value = '\0';
+            ori_node_p->suit = '\0';
+            ori_node_p->next = NULL;
+        }
+        return message;
 
 
     }else if(destination.node.suit != origin.node.suit){
@@ -430,13 +434,7 @@ char* moveFromCToC(struct LinkedList** head_ref_l,int from,int to){
 
 
 char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char value, char suit){
-    if(from > 8 || from < 1){
-        return "Invalid origin value";
-    }else if(to > 8 || to < 1){
-        return "Invalid destination value";
-    }else if(to == from){
-        return "Cannot move card to same column";
-    }
+
 
     char* message = "OK";
     struct LinkedList origin = **head_ref_l;
@@ -446,6 +444,7 @@ char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char valu
     struct Node* des_node_p;
     struct Node* ori_node_p;
     struct Node *node_temp = (struct Node*) malloc(sizeof(struct Node));
+    struct Node *node_temp2 = (struct Node*) malloc(sizeof(struct Node));
 
     int counter = 0;
     int o_empty = 0;
@@ -525,18 +524,27 @@ char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char valu
     int ori_value = convertValue(origin.node.value);
 
     if(d_empty){
-        des_node_p->value = ori_node_p->next->value;
-        des_node_p->suit = ori_node_p->next->suit;
-        if(ori_node_p->next->next != NULL){
-            node_temp = ori_node_p;
-            node_temp = node_temp->next->next;
-            des_node_p->next = node_temp;
-            ori_node_p->next = NULL;
+        if(ori_node_p->next !=NULL){
+            if(ori_node_p->next->next != NULL){
+                des_node_p->value = ori_node_p->next->value;
+                des_node_p->suit = ori_node_p->next->suit;
+                des_node_p->next = ori_node_p->next->next;
+                ori_node_p->next = NULL;
+            }else{
+                des_node_p->value = ori_node_p->value;
+                des_node_p->suit = ori_node_p->suit;
+                des_node_p->next = ori_node_p->next;
+                ori_node_p->next = NULL;
+            }
 
         }else{
+            des_node_p->value = ori_node_p->value;
+            des_node_p->suit = ori_node_p->suit;
+            des_node_p->next = NULL;
+            ori_node_p->value = '\0';
+            ori_node_p->suit = '\0';
             ori_node_p->next = NULL;
         }
-
         return message;
 
     }else if(destination.node.suit != origin.node.suit){
@@ -544,10 +552,10 @@ char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char valu
         if(des_value-ori_value == 1){
             des_node_p->next = ori_node_p->next;
             if(o_empty){
-                node_temp->value = ori_node_p->value;
-                node_temp->suit = ori_node_p->suit;
-                node_temp->next = NULL;
-                des_node_p->next = node_temp;
+                node_temp2->value = ori_node_p->value;
+                node_temp2->suit = ori_node_p->suit;
+                node_temp2->next = NULL;
+                des_node_p->next = node_temp2;
                 ori_node_p->value = '\0';
                 ori_node_p->suit = '\0';
                 ori_node_p->next = NULL;
@@ -658,12 +666,35 @@ char* moveCardFromCToF(struct LinkedList** head_ref_l,int from,int to, char valu
 
     int ori_value = convertValue(origin.node.value);
 
+    if(origin.node.next != NULL){
+        return "Invalid move, only bottom cards can be moved to a foundation\0";
+    }
+
     if(d_empty){
-        des_node_p->value = ori_node_p->next->value;
-        des_node_p->suit = ori_node_p->next->suit;
-        des_node_p->next = NULL;
-        ori_node_p->next = NULL;
-        return message;
+        if(origin.node.value == 'A' && origin.node.next == NULL){
+            if(o_empty){
+                node_temp->value = ori_node_p->value;
+                node_temp->suit = ori_node_p->suit;
+                node_temp->next = NULL;
+                des_node_p->value = node_temp->value;
+                des_node_p->suit = node_temp->suit;
+                des_node_p->next = NULL;
+
+                ori_node_p->suit = '\0';
+                ori_node_p->value = '\0';
+                ori_node_p->next = NULL;
+                return message;
+            }else{
+                des_node_p->value = ori_node_p->next->value;
+                des_node_p->suit = ori_node_p->next->suit;
+                des_node_p->next = NULL;
+                ori_node_p->next = NULL;
+                return message;
+            }
+        }else{
+            return "Invalid move, cards not in order\0";
+        }
+
 
     }else if(destination.node.suit == origin.node.suit){
         if(ori_value-des_value == 1){
@@ -718,6 +749,41 @@ void insertAtL(struct LinkedList** head_ref_l,struct Node head_ref, int position
     last->next = new_linkedlist;
 
 }
+
+
+int gameWon(struct LinkedList** head_ref_l){
+
+    struct LinkedList* list = *head_ref_l;
+    struct Node* current_node = (struct Node*) malloc(sizeof(struct Node));
+    int counter = 0;
+    int card_counter = 0;
+
+    while(list != NULL){
+        counter++;
+        if(counter>=8){
+            current_node = list;
+            if(current_node->value != '\0' && current_node->suit != '\0'){
+                card_counter++;
+            }
+            while(current_node->next != NULL){
+                card_counter++;
+                current_node = current_node->next;
+            }
+        }
+        list = list->next;
+    }
+
+    if(card_counter == 52){
+        return 1;
+    }else{
+        return 0;
+    }
+
+
+
+
+}
+
 
 
 void appendL(struct LinkedList** head_ref_l,struct Node head_ref){

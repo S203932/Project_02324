@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "linkedlist.h"
-#include "Card.h"
 
 char* LD(char *filename, struct Node **node){
     char check[] = " ";

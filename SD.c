@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "card.h"
 #include <string.h>
 #define DEFAULT_FILENAME "cards.txt"
 typedef struct Node{

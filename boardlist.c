@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include "linkedlist.h"
 #include "linkedlist2.h"
 

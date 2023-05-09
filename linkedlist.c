@@ -115,7 +115,6 @@ void reverse(struct Node** head_ref){
     struct Node* prev = NULL;
     struct Node* current  = *head_ref;
     struct Node* next = NULL;
-    //struct Node *last = *head_ref;
     while(current != NULL){
         // Store next
         next = current->next;

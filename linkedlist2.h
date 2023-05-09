@@ -25,6 +25,7 @@ char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char valu
 
 int convertValue(char value);
 
+int gameWon(struct LinkedList** head_ref_l);
 
 char* moveCardFromCToF(struct LinkedList** head_ref_l,int from,int to, char value, char suit);
 
