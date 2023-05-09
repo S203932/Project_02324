@@ -554,7 +554,11 @@ char* moveCardFromCToC(struct LinkedList** head_ref_l,int from,int to, char valu
             if(o_empty){
                 node_temp2->value = ori_node_p->value;
                 node_temp2->suit = ori_node_p->suit;
-                node_temp2->next = NULL;
+                if(ori_node_p->next != NULL){
+                    node_temp2->next = ori_node_p->next;
+                }else{
+                    node_temp2->next = NULL;
+                }
                 des_node_p->next = node_temp2;
                 ori_node_p->value = '\0';
                 ori_node_p->suit = '\0';
