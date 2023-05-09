@@ -18,14 +18,14 @@ char* SD(char* filename, struct Node** head_ref) {
     char *message;
     if(strcmp(filename,check) == 0){
         char *backup = "cards.txt";
-        file = fopen(backup,"r" );
+        file = fopen(backup,"w" );
         if (NULL == file){
             message="Error in opening cards.txt\0";
         }else{
             message = "OK\0";
         }
     }else{
-        file = fopen(filename,"r" );
+        file = fopen(filename,"w" );
         if (NULL == file){
             message="Error in opening the given file\0";
         }else{
@@ -41,7 +41,5 @@ char* SD(char* filename, struct Node** head_ref) {
     }
 
     fclose(file);
-    printf("Cards saved to file %s\n", filename);
-
-return "ok";
+    return message;
 }
